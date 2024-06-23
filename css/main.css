@@ -6,6 +6,21 @@ body {
   background-color: rgb(4, 63, 99);
 }
 
+
+header{
+background-image:linear-gradient( rgba(0, 0, 0, 0.4) 100%),
+url(../images/pexels-bri-schneiter-28802-346529.jpg);
+background-size: cover;
+background-position: center;
+}
+
+
+
+
+
+
+
+
 .home .box-input .btn-color {
   background-color: rgb(4, 63, 99);
   color: rgb(255, 255, 255);
@@ -77,9 +92,6 @@ footer .social-icon {
 
 
 
-
-
-
 /* ============ media Quari ============ */
 @media (min-width: 1400px) {
   .container-xxl,
@@ -88,6 +100,6 @@ footer .social-icon {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1320px;
+    max-width: 1140px;
   }
 }
