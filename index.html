@@ -1,0 +1,286 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="image/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+    <title>Weather Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- ====================== navbar ======================= -->
+    <nav class="navbar my-nav navbar-expand-lg bg-navbar navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <div class="d-flex">
+            <span></span>
+            <h1 class="h3 ms-2">Weather</h1>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live cameras </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ======================  header ======================= -->
+    <header>
+      <section class="home">
+        <div class="container">
+          <div class="text-white mb-4 py-5">
+            <div class="box-input d-flex mb-3">
+              <button
+                id="btnLocationName"
+                class="me-1 btn-color rounded rounded-pill"
+              >
+                <i class="fa-solid me-2 text-white fa-magnifying-glass"></i>
+                Search
+              </button>
+              <input
+                type="search"
+                class="form-control w-75 ms-2 me-0 mx-auto"
+                placeholder="Find Your Location..."
+                aria-label="Username"
+                id="locationName"
+                aria-describedby="basic-addon1"
+              />
+              <span
+                ><i
+                  class="fa-solid fa-magnifying-glass bg-navbar ms-0 p-3 rounded"
+                ></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- ======================== Card of weather ======================= -->
+          <div class="row g-4" id="rowData">
+            <div class="col-md-4 h-100">
+              <div class="card rounded border-0 py-5 pb-3 pt-0">
+                <div
+                  class="card-title rounded d-flex justify-content-around py-2"
+                >
+                  <p>Sunday</p>
+                  <p>23 June</p>
+                </div>
+                <div class="">
+                  <div class="py-3 card-caption">
+                    <h2 class="text-center">Cairo</h2>
+
+                    <p class="ps-4 text-center">
+                      30.2
+                      <sup>o </sup>C
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex caption2 justify-content-around align-items-center"
+                  >
+                    <span>
+                      <img
+                        src="http://cdn.weatherapi.com/weather/64x64/night/113.png"
+                        class="w-100"
+                        alt="condition"
+                      />
+                    </span>
+                    <p class="d-block h4">Clear</p>
+                  </div>
+                </div>
+                <div class="py-1 end-card mt-4 d-flex justify-content-evenly">
+                  <div class="">
+                    <span><i class="fa-solid fa-umbrella"></i></span>
+                    <span>20%</span>
+                  </div>
+                  <div class="">
+                    <span><i class="fa-solid fa-sun-plant-wilt"></i></span>
+                    <span>18km/h</span>
+                  </div>
+                  <div class="">
+                    <span><i class="fa-solid fa-arrow-trend-up"></i></span>
+                    <span> East</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 border-0 imag-card rounded py-5 pt-0">
+                <div
+                  class="card-title pb-4 rounded d-flex justify-content-evenly py-2"
+                >
+                  <p>Monday</p>
+                  <p>24 June</p>
+                </div>
+                <span class="d-block text-center">
+                  <img
+                    src="http://cdn.weatherapi.com/weather/64x64/day/113.png"
+                    style="width: 70px; height: 70px"
+                    alt="condition"
+                  />
+                </span>
+
+                <div class="py-3">
+                  <div class="py-3 card-caption3">
+                    <p class="text-center">
+                      41.6
+                      <sup>o</sup>C
+                    </p>
+
+                    <span class="h6 ps-4 d-block text-center">
+                      29.2
+                      <sup>o</sup>
+                    </span>
+                    <span class="d-block text-center h6"> Sunny </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 border-0 imag-card3 rounded py-5 pt-0">
+                <div
+                  class="card-title pb-4 rounded d-flex justify-content-evenly py-2"
+                >
+                  <p>Tuesday</p>
+                  <p>25 June</p>
+                </div>
+                <span class="d-block text-center">
+                  <img
+                    src="http://cdn.weatherapi.com/weather/64x64/day/113.png"
+                    style="width: 70px; height: 70px"
+                    alt="condition"
+                  />
+                </span>
+
+                <div class="py-3">
+                  <div class="py-3 card-caption3">
+                    <p class="text-center">
+                      41.2
+                      <sup>o</sup>C
+                    </p>
+
+                    <span class="h6 ps-4 d-block text-center">
+                      28
+                      <sup>o</sup>
+                    </span>
+                    <span class="d-block text-center h6"> Sunny </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- =====================  Box msg ======================= -->
+    <main>
+      <section>
+        <div class="container">
+          <div class="light-box">
+            <div class="box-msg card p-1">
+              <span class="d-block text-center p-3"
+                ><i
+                  class="fa-regular text-danger close-icon fa-circle-xmark"
+                ></i>
+              </span>
+              <p class="ps-1">
+                <span
+                  ><i class="fa-solid text-danger fa-1x fa-arrow-right-long"></i
+                ></span>
+                invalid search. <br />
+
+                <span
+                  ><i class="fa-solid text-danger fa-1x fa-arrow-right-long"></i
+                ></span>
+                Try again. <br />
+
+                <span
+                  ><i class="fa-solid text-danger fa-1x fa-arrow-right-long"></i
+                ></span>
+                Please Enter The Correct Location To Find Weather For It.
+              </p>
+              <button class="btn btn-danger w-40 mx-auto">
+                Click Me To Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- =====================  footer ======================= -->
+    <footer class="footer mt-3">
+      <div class="container">
+        <div class="text-white p-3">
+          <div class="box-input d-flex">
+            <input
+              type="search"
+              class="form-control w-75 me-0 mx-auto"
+              placeholder="Enter Your Email to Subscribe...."
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+            <span class="">
+              <i
+                class="fa-solid fa-magnifying-glass bg-navbar me-0 p-3 rounded"
+              ></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="social-icon">
+          <span><i class="fa-brands fa-facebook-f"></i></span>
+          <span><i class="fa-brands fa-twitter"></i></span>
+          <span><i class="fa-brands fa-google"></i></span>
+          <span><i class="fa-brands fa-pinterest-p"></i></span>
+        </div>
+        <div class="copy-right">
+          <p class="mb-0 pb-4 text-center text-white h6">
+            Copyright 2014 Company name. Designed by Themezy. All rights
+            reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
