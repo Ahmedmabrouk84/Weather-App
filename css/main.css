@@ -1,28 +1,69 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Kanit, sans-serif;
 }
 
 .bg-navbar {
-  background-color: rgb(4, 63, 99);
+  background-color: rgb(105, 56, 10);
+}
+.my-nav .navbar-brand h1 {
+  font-size: 30px;
+  font-weight: 450;
+}
+.my-nav .nav-item .nav-link {
+  padding-inline: 15px;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.my-nav .nav-item .nav-link.active {
+  position: relative;
+}
+.my-nav .nav-item .nav-link.active::after {
+  position: absolute;
+  content: "";
+  width: 85%;
+  height: 3px;
+  background-color: #fff;
+  left: 0px;
+  bottom: 0;
 }
 
-
-header{
-background-image:linear-gradient( rgba(0, 0, 0, 0.4) 100%),
-url(../images/pexels-bri-schneiter-28802-346529.jpg);
-background-size: cover;
-background-position: center;
+.my-nav .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 3px;
+  background-color: #fff;
+  left: -150px;
+  bottom: 0;
+  transition: 0.5s;
 }
 
+.my-nav .nav-item:hover .nav-link::after {
+  left: 0;
+}
 
-
-
-
-
-
+/* =========== header =========== */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0% 100%),
+    url(../images/pexels-nicole-avagliano-1132392-2749481.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+/* ================ home ================ */
+.home input:focus {
+  box-shadow: -1px 0 5px 3px #803908;
+}
 
 .home .box-input .btn-color {
-  background-color: rgb(4, 63, 99);
+  background-color: #68370a;
   color: rgb(255, 255, 255);
   font-size: 18px;
   border-width: 1.6px;
@@ -33,11 +74,9 @@ background-position: center;
 }
 
 .home .card {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.4) 100%
-    ),
-    url(../image/pexels-abdghat-1631678.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0% 100%),
+    url(../images/pexels-matthew-montrone-230847-1179225.jpg);
+
   background-size: cover;
   color: rgb(255, 255, 255);
   background-position: center center;
@@ -46,25 +85,42 @@ background-position: center;
 .home .imag-card {
   background-size: cover;
   color: rgb(255, 255, 255);
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.4) 100%
-    ),
-    url(../image/pexels-diego-giron-464799823-16554762.jpg) !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0% 100%),
+    url(../images/pexels-tobiasbjorkli-2113563.jpg);
   background-position: center center;
 }
 
 .home .imag-card3 {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.4) 100%
-    ),
-    url(../image/pexels-petr-slovacek-770136941-18925511.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0% 100%),
+    url(../images/pexels-kasuma-1785493.jpg);
+
   background-size: cover;
   color: rgb(255, 255, 255);
   background-position: center center;
 }
+.home .card .card-title.card-bg-light {
+  background-color: #68370a39;
+}
+.home .card .card-title p {
+  font-size: 20px;
+}
 
+.home .card .card-caption p {
+  font-size: 63px;
+  font-weight: 500;
+}
+.home .card .end-card span {
+  font-size: 18px;
+}
+.home .card .card-caption3 p {
+  font-size: 40px;
+  font-weight: 500;
+}
+.home .card .card-caption3 span {
+  font-size: 20px;
+  font-weight: 500;
+}
+/* ============= light-box =============== */
 .light-box {
   background-color: rgba(0, 0, 0, 0.53);
   position: fixed;
@@ -79,6 +135,32 @@ background-position: center;
   background-color: rgb(247, 236, 222);
 }
 
+.light-box .box-msg p {
+  font-size: 18px;
+}
+
+.light-box .box-msg span i {
+  font-size: 18px;
+}
+
+.light-box .box-msg .close-icon {
+  font-size: 65px;
+}
+
+/* =========== footer =========== */
+footer {
+  /* background-color: rgb(140, 96, 64); */
+  background-color: rgb(4, 63, 99);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0% 100%),
+    url(../images/pexels-enjoyviibes-1232594.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+footer .box-input input:focus {
+  box-shadow: -1px 0 5px 3px #803908;
+}
+
 footer .social-icon {
   display: flex;
   justify-content: center;
@@ -86,11 +168,26 @@ footer .social-icon {
   padding: 25px;
 }
 
+footer .social-icon span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: solid 2px #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #803908;
+  margin-left: 8px;
+  color: #fff;
+  transition: 0.5s;
+}
 
-
-
-
-
+footer .social-icon span:hover {
+  background-color: #fff;
+  border: solid 2px #803908;
+  color: #803908;
+}
 
 /* ============ media Quari ============ */
 @media (min-width: 1400px) {
@@ -101,5 +198,28 @@ footer .social-icon {
   .container-sm,
   .container {
     max-width: 1140px;
+  }
+}
+
+@media (max-width: 991px) {
+  .my-nav .nav-item .nav-link.active::after {
+    position: absolute;
+    content: "";
+    width: 4.6875rem;
+    height: 3px;
+    background-color: #fff;
+    left: 0px;
+    bottom: 0;
+    /* transition: .5s; */
+  }
+  .my-nav .nav-item .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 0.1875rem;
+    background-color: #fff;
+    left: -9.375rem;
+    bottom: 0;
+    transition: 0.5s;
   }
 }
